@@ -152,7 +152,7 @@ main{
     width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
     margin-top: 50px;
 }
 .category{
@@ -185,6 +185,31 @@ main{
     color: #000000c0;
     font-weight: bolder;
     font-size: 100%;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+
+}
+.product{
+    display: flex;
+    background-color: #ffffff94;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    color: #000000d0;
+}
+.product img{
+    width: 200px;
+    height: 200px;
+}
+.product h6{
+    font-size: 15px;
+    max-width: 200px;
 }
 @media (max-width: 800px) {
     header,main{
