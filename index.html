@@ -9,22 +9,46 @@
 </head>
 
 <body>
-    <nav>
-        <a href="#" class="logo"><img src="assets/arp.png" alt="logo"></a>
-        <span class="navPages">
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="assets/arp.png" alt="logo"></a>
+            <span class="navPages">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </span>
+            <span class="navIcons">
+                <a href=""><img src="assets/icons/magnifying-glass-solid.svg" alt=""></a>
+                <a href=""><img src="assets/icons/heart-regular.svg" alt=""></a>
+                <a href=""><img src="assets/icons/cart-shopping-solid.svg" alt=""></a>
+                <a href=""><img src="assets/icons/user-regular.svg" alt=""></a>
+            </span>
+            <span class="mobileMenu">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </span>
+            <img class="menuIcon" src="assets/icons/bars-solid.svg" alt="Menu Icon"
+                onclick="displayNoneOrOther('.mobileMenu', 'flex')">
+        </nav>
+        <span class="headerContent">
+            <span class="headerText">
+                <h4>Aukat Kee Bahir Headphone</h4>
+                <h1>ASTRO A50 X LIGHTSPEED <br> WIRELESS</h1>
+                <p>Experience next-level wireless gaming audio with the ASTRO A50 Wireless
+                    + Base Station. Engineered for pro-grade performance, the ASTRO A50
+                    delivers superior sound quality, unrivaled comfort, and advanced
+                    features to elevate your gaming experience.</p>
+                <button><img src="assets/icons/cart-shopping-solid.svg" alt=""> Shop Now</button>
+            </span>
+            <span class="headerImage">
+                <img src="assets/astro-a50-x-white-gallery-7.png" alt="">
+            </span>
         </span>
-        <span class="navIcons">
-            <a href=""><img src="assets/icons/magnifying-glass-solid.svg" alt=""></a>
-            <a href=""><img src="assets/icons/heart-regular.svg" alt=""></a>
-            <a href=""><img src="assets/icons/cart-shopping-solid.svg" alt=""></a>
-            <a href=""><img src="assets/icons/user-regular.svg" alt=""></a>
-        </span>
-    </nav>
-    <header></header>
+    </header>
 </body>
+<script src="script.js"></script>
 
 </html>
