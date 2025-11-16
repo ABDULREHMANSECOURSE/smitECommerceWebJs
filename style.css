@@ -204,6 +204,7 @@ main {
     justify-content: space-between;
     background-color: #ffffff86;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .category span img {
