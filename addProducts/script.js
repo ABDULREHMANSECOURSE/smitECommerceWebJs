@@ -52,17 +52,44 @@ function addProductFunc() {
             popup("Image is not square!");
             return;
         }
-    }
-    if (pName.value === "") {
-        popup("Product ka kia name he")
-        return;
-    } 
-    if (pPrice.value ==="") {
-        popup("Product ki kia price he")
-        return;
-    }
-    if (pCategory.value === "") {
-        popup("Select product category")
-        return;
+        if (pName.value === "") {
+            popup("Product ka kia name he")
+            return;
+        }
+        if (pPrice.value === "") {
+            popup("Product ki kia price he")
+            return;
+        }
+        if (pCategory.value === "") {
+            popup("Select product category")
+            return;
+        }
+
+        const imageReader = new FileReader();
+        imageReader.onload = function (e) {
+
+            const products = JSON.parse(localStorage.getItem('products')) || []
+
+            const product = {
+                image: e.target.result
+                , name: pName.value
+                , price: pPrice.value
+                , category: pCategory.value
+            }
+            
+            pImg.value = "";
+            pName.value = "";
+            pPrice.value = "";
+            pCategory.value = "";
+            imgURL = "";
+
+            products.push(product)
+            localStorage.setItem('products', JSON.stringify(products))
+            popupGreen("Product added!");
+        }
+        imageReader.readAsDataURL(imageFile)
+
+        updatePreview();
     }
 }
+updatePreview();
