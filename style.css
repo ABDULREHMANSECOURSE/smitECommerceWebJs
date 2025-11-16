@@ -92,7 +92,8 @@ nav {
 
 .headerContent {
     height: 100%;
-    width: 100%;    display: flex;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -106,6 +107,7 @@ nav {
     justify-content: space-between;
     gap: 3vw;
 }
+
 .headerText button {
     width: 150px;
     height: 40px;
@@ -121,13 +123,16 @@ nav {
     cursor: pointer;
     transition-duration: 1000ms;
 }
+
 .headerText button:hover {
     background-color: #ffffff3f;
     scale: 1.2;
 }
+
 .headerText img {
     height: 30px;
 }
+
 .headerImage {
     position: relative;
     flex: 1;
@@ -136,10 +141,12 @@ nav {
 .headerImage img {
     width: 100%;
 }
+
 .headerText h1 {
     font-size: 40px;
     color: #ffffff;
 }
+
 .headerText p {
     font-size: 15px;
     color: #ffffff83;
@@ -147,7 +154,7 @@ nav {
     line-height: 1.5;
 }
 
-main{
+main {
     margin: auto;
     width: 80%;
     display: flex;
@@ -155,14 +162,16 @@ main{
     gap: 50px;
     margin-top: 50px;
 }
-.category{
+
+.category {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 20px;
 }
-.categoryH2{
+
+.categoryH2 {
     color: #ffffffb7;
     font-weight: 900;
     font-size: 40px;
@@ -177,24 +186,28 @@ main{
     padding: 10px;
     border-radius: 10px;
 }
-.category span img{
+
+.category span img {
     padding: 5%;
     width: 100px;
 }
-.category h3{
+
+.category h3 {
     color: #000000c0;
     font-weight: bolder;
     font-size: 100%;
 }
-.products{
-    display: flex;
-    flex-direction: row;
+
+.products {
     width: 100%;
     height: auto;
-    gap: 20px;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5vw;
 }
-.product{
+
+.product {
     display: flex;
     background-color: #ffffff94;
     border-radius: 10px;
@@ -202,19 +215,26 @@ main{
     gap: 10px;
     flex-direction: column;
     color: #000000d0;
+    max-width: 20%;
+    flex-shrink: inherit;
 }
-.product img{
-    width: 200px;
-    height: 200px;
+
+.product img {
+    width: 100%;
 }
-.product h6{
-    font-size: 15px;
-    max-width: 200px;
+
+.product h6 {
+    font-size: 100%;
+    width: 100%;
 }
-@media (max-width: 800px) {
-    header,main{
-        width: 100%;
+
+@media (max-width: 850px) {
+
+    header,
+    main {
+        width: 98%;
     }
+
     nav {
         padding: 0 10px;
     }
@@ -260,11 +280,21 @@ main{
         font-weight: bold;
         transition-duration: 500ms;
     }
+
     .headerContent {
         flex-direction: column-reverse;
         gap: 20px;
     }
+
     .headerImage img {
         max-width: 400px;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .product{
+        max-width: 100%;
     }
 }

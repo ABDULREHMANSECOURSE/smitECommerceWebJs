@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span class="addProduct">
+        <h1>Add Products</h1>
+        <label for="pImg" class="productImage">
+            Select Image
+            <input type="file" accept="image/*" id="pImg">
+        </label>
+        <label for="pName">Product Name <input type="text" id="pName" placeholder="Product Name"></label>
+        <label for="pPrice">Product Price <input type="number" id="pPrice"
+                placeholder="Product Price"></label>
+        <label for="pCategory" class="productCategory">Select Category
+            <select name="selectCategory" id="pCategory">
+                <option value="" disabled selected>-- Select a category --</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing & Apparel</option>
+                <option value="homeAppliances">Home Appliances</option>
+                <option value="books">Books & Media</option>
+                <option value="sports">Sports & Outdoors</option>
+                <option value="beauty">Beauty & Personal Care</option>
+                <option value="mobile">Mobile Phones</option>
+                <option value="furniture">Furniture</option>
+                <option value="toys">Toys & Games</option>
+                <option value="grocery">Grocery</option>
+                <option value="accessories">Accessories</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+        <button class="addProductButton">Add Product</button>
+    </span>
+    <h1>Product Over View</h1>
+    <span class="productOverView">
+    </span>
+</body>
+<script src="script.js"></script>
+
+</html>
