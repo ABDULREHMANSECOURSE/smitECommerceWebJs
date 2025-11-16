@@ -14,6 +14,43 @@ body{
     gap: 50px;
     padding: 50px 0;
 }
+.popup {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    padding: 20px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: 
+        popup-slide-in 0.5s ease-out forwards, 
+        popup-slide-out 0.5s ease-in forwards 2s; 
+}
+@keyframes popup-slide-in {
+    0% { 
+        top: -100px; 
+        opacity: 0; 
+    }
+    100% { 
+        top: 20px;
+        opacity: 1; 
+    }
+}
+
+@keyframes popup-slide-out {
+    0% { 
+        top: 20px;
+        opacity: 1;
+    }
+    100% { 
+        top: -100px;
+        opacity: 0;
+    }
+}
 .addProduct{
     display: flex;
     flex-direction: column;
