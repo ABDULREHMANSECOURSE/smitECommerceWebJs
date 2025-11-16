@@ -11,16 +11,17 @@ function loadProduct(category = "") {
     const products = JSON.parse(localStorage.getItem('products')) || [];
 
     products.forEach(product => {
-        // If category is selected, filter
+
         if (category && product.category !== category) return;
 
         productsContainer.innerHTML += `
-            <span class="product">
-                <img src="${product.image}" alt="">
-                <h6>${product.name}</h6>
-                <h2>${product.price}</h2>
-            </span>
-        `;
+        <span class="productOverView">
+        <img src="${product.image}">
+        <h3>${product.name}</h3>
+        <p>${"Price: $" + product.price}</p>
+        <p>${"Category: " + product.category}</p>
+        </span>
+    `;
     });
 }
 loadProduct();
