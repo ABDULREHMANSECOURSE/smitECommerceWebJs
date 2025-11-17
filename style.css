@@ -229,6 +229,14 @@ main {
     gap: 5vw;
 }
 
+.products h3 {
+    margin: 10px auto;
+    word-wrap: break-word;
+    color: #555;
+    font-size: 20px;
+    text-align: center;
+}
+
 @media (max-width: 850px) {
 
     header,
@@ -313,13 +321,6 @@ main {
     height: 150px;
     border-radius: 12px;
     border: 1px solid #ddd;
-}
-
-.products h3 {
-    margin: 10px 0 5px;
-    color: #555;
-    font-size: 20px;
-    text-align: center;
 }
 
 .products p:nth-of-type(1) {
