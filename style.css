@@ -355,6 +355,7 @@ main {
 
 .showAll {
     cursor: pointer;
+    width: 150px;
 }
 
 .showAll h1 {
