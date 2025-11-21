@@ -5,7 +5,13 @@ function displayNoneOrOther(element, currentDisplay) {
 
 const productsContainer = document.querySelector('.products');
 
-function loadProduct(category = "") {
+function loadProduct(category) {
+    if (category) {
+        document.querySelector('.showAll').style.display = "block"
+    } else {
+        document.querySelector('.showAll').style.display = "none"
+
+    }
     productsContainer.innerHTML = "";
 
     const products = JSON.parse(localStorage.getItem('products')) || [];
@@ -15,7 +21,7 @@ function loadProduct(category = "") {
         if (category && product.category !== category) return;
 
         productsContainer.innerHTML += `
-        <span class="productOverView">
+        <span class="productOverView product">
         <img src="${product.image}">
         <h3>${product.name}</h3>
         <p>${"Price: $" + product.price}</p>
